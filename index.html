@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lekhuno Logistics</title>
+
+  <style>
+    :root {
+      --primary: #0b5ed7;
+      --dark: #0f172a;
+      --light: #ffffff;
+      --muted: #64748b;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--dark);
+      background: #f8fafc;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(120deg, var(--primary), #084298);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header img {
+      max-width: 120px;
+      margin-bottom: 15px;
+    }
+
+    header h1 {
+      margin: 0 0 10px;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+
+    section {
+      padding: 50px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    }
+
+    .contact {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    form label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #cbd5e1;
+      font-size: 0.95rem;
+    }
+
+    form textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    form button {
+      margin-top: 15px;
+      padding: 12px;
+      width: 100%;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background: #084298;
+    }
+
+    footer {
+      background: #020617;
+      color: #e5e7eb;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+
+    .muted { color: var(--muted); }
+    .success { color: green; margin-top: 10px; }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-content">
+    <img src="ChatGPT Image Dec 29, 2025, 04_31_47 PM.png" alt="Lekhuno Logistics Logo" />
+
+    <div class="header-text">
+      <h1>Lekhuno Logistics</h1>
+      <p>Engineered to Move</p>
+    </div>
+  </div>
+</header>
+
+  <section>
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="card">
+        <h3>Transportation</h3>
+        <p class="muted">Safe and efficient transportation across South Africa.</p>
+      </div>
+      <div class="card">
+        <h3>Warehousing</h3>
+        <p class="muted">Secure storage and inventory management solutions.</p>
+      </div>
+      <div class="card">
+        <h3>Express Delivery</h3>
+        <p class="muted">Time-critical shipments delivered on schedule.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contact Us</h2>
+    <div class="contact">
+      <div class="card">
+        <h3>Get in Touch</h3>
+        <p><strong>Phone:</strong> +27 65 880 0843</p>
+        <p><strong>Email:</strong> info@lekhunologistics.co.za</p>
+        <p><strong>Address:</strong> Nigel, South Africa</p>
+        <p class="muted">We respond within 24 hours.</p>
+      </div>
+
+      <form id="contactForm">
+        <h3>Send Us a Message</h3>
+
+        <label>Name</label>
+        <input type="text" required />
+
+        <label>Email</label>
+        <input type="email" required />
+
+        <label>Message</label>
+        <textarea required></textarea>
+
+        <button type="submit">Send Message</button>
+        <div id="formStatus"></div>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Lekhuno Logistics. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('formStatus').textContent =
+        'Thank you! Your message has been sent.';
+      document.getElementById('formStatus').className = 'success';
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
